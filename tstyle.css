@@ -9,7 +9,7 @@ body{
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 10px;
+    gap: 9px;
     border-bottom: solid black 1px;
     gap: 1px;
     align-items:center;
@@ -41,50 +41,22 @@ body{
     display:inline-flex;
     gap:8px;
 }
-.navbar__s3 s{
+.navbar__s3__s{
     border:solid black 1px;
-    background-color: white;
-    color:black;
+    background-color: black;
+    color:white;
+    border-radius:20px;
+    cursor: pointer;
+    padding-left: 8px;
+}
+.navbar__s3__s:hover{
+    transform: scale(1.1);
 }
 .navbar__s4{
     display: none;
 }
-.myLearning{
-    position:relative;
-    cursor: pointer;
-}
-.myLearning__popup{
-    position: absolute;
-    background-color: white;
-    border:solid black 1px;
-    width: 100px;
-    top:150%;
-    right: 0px;
-    padding: 20px;
-    display: none;
-}
-.myLearning:hover .myLearning__popup{
-    background-color: white;
-    display:block;
-}
-.categories{
-    display: flex;
-    padding: 10px;
-    border-bottom: solid black 1px;
-    justify-content: space-around;
-}
-.categories p{
-    background-color: #a435f0;
-    color: white;
-    padding: 10px;
-    border-radius: 30px;
-    border: solid black 1px;
-    cursor: pointer;
-}
-.categories p:hover{
-    background-color: white;
-    color: black;
-}
+
+
 .sale-image{
     position: relative;
 }
@@ -125,42 +97,96 @@ body{
     width:100%;
     height:50%;
 }
-.topics{
-    padding:10px;
-}
-.topics__container{
-    display: flex;
-    gap:10px;
-    margin-top: 10px;
-    flex-wrap: wrap;
-}
-.topics__container p{
-    border:solid gray 2px;
-    padding: 10px;
-    flex-grow: 1;
-    flex-basis: 25%;
-
-}
 .popular{
     padding: 10px;
+    margin-bottom: 11px;
 }
 .popular__container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 20px;
+    gap:2px;
+}
+.h{
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    
+}
+.h:hover{
+        transform: scale(1.1);
+        transition-duration: 1s;
+
+}
+
+.h img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+
+.h h3,p{
+    padding: 10px 15px;
+}
+
+.h hr{
+    margin: 10px 15px;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+.hotel-footer{
+    margin-top: auto;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hotel-footer button{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.hotel-footer button:hover{
+    background-color: white;
+    color: black;
+    border: solid black 1px;
 }
 .footer{
-    padding:30px;
+    padding:50px;
     background-color: black;
-    color: white;
+    color:white;
 }
 .footer__one{
+    padding-left: 600px;
     display: flex;
-    gap: 10px;
+    gap: 80px;
 }
 .footer__one p{
-    margin: 10px;
+    margin: 1px;
+    padding-right: 20px;
+}
+.footer__one h6{
+    padding-left: 10px;
 }
 .footer__two{
     display: flex;
@@ -168,22 +194,49 @@ body{
     margin: 20px;
     align-items: center;
 }
+.food{
+    padding-top:25px;
+    padding-left: 10px;
+}
+.food-card h3,p{
+    padding-left: 5px;
+    padding-right: 20px;
+}
+.food__container{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.food-card{
+    width:280px;
+    flex-grow: 1;
+    flex-basis: 5px;
+    margin: 5px;
+    margin-bottom: 80px;
+}
+.food-card img{
+    width:85%;
+    height:80%;
+}
 @media screen and (max-width: 800px){
     body{
         font-size: 10px;
     }
 }
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 800px){
       .course-card{
         flex-basis: 40%;
       }
-      .categories{
+      .h{
+        flex-basis: 40%;
+      }
+     
+     .navbar__s3{
         display: none;
       }
-      .navbar__s2,.navbar__s3{
+     .navbar__s2{
         display: none;
-      }
-      .navbar__s4{
-        display: block;
-      }
+     }
 }
